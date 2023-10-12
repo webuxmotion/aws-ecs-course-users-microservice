@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "1ab5217c-0981-4a3a-9481-11492ffbf781",
+		"name": "aws-users-microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12457864",
+		"_collection_link": "https://www.postman.com/spino-bot/workspace/devops-course-1/collection/12457864-1ab5217c-0981-4a3a-9481-11492ffbf781?action=share&source=collection_link&creator=12457864"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Andrii\",\n    \"lastName\": \"Pereverziev\",\n    \"email\": \"test@test.com\",\n    \"password\": \"88888888\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"88888888\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/users/80406bd3-1fc0-48b3-9bdf-e76c65ac44b1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI4MDQwNmJkMy0xZmMwLTQ4YjMtOWJkZi1lNzZjNjVhYzQ0YjEiLCJleHAiOjE3MDY3ODIyMzR9.LZqWfqOc8jkUvyUccp-JAXxo0pAoq6LUjweuv_fQgIvYqVpEWDkZcXNaC6fh3ywKCn2xXyDUsx3iNGF7OX55Iw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/users/80406bd3-1fc0-48b3-9bdf-e76c65ac44b1?fields=albums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"users",
+						"80406bd3-1fc0-48b3-9bdf-e76c65ac44b1"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "albums"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
